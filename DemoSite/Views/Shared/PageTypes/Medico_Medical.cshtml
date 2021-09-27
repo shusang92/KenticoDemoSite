@@ -1,0 +1,18 @@
+﻿@model Kentico.Content.Web.Mvc.Routing.IPageViewModel<CMS.DocumentEngine.Types.Medico.Medical>
+
+@{
+    ViewBag.Title = Model.Page.DocumentName;
+}
+
+<section class="teaser">
+    <div class="col-sm-offset-3 col-sm-4">
+        <p>@Model.Page.Fields.CenterHeader</p>
+    </div>
+    <div class="clearfix"></div>
+</section>
+<section class="content">
+    <div class="col-sm-offset-3 col-sm-5">
+        @Html.Kentico().ResolveUrls(Model.Page.Fields.CenterText)
+    </div>
+    <div class="clearfix"></div>
+</section>
